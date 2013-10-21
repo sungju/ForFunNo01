@@ -26,6 +26,7 @@
 		824D91021815D4CE007B6174 /* ForFunNo01Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 824D91011815D4CE007B6174 /* ForFunNo01Tests.m */; };
 		824D910C1815D54F007B6174 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 824D910B1815D54F007B6174 /* .gitignore */; };
 		824D910E1815D56F007B6174 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 824D910D1815D56E007B6174 /* LICENSE */; };
+		82B3FF031815E06D00A97590 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 82B3FF021815E06D00A97590 /* ball.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		824D91011815D4CE007B6174 /* ForFunNo01Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForFunNo01Tests.m; sourceTree = "<group>"; };
 		824D910B1815D54F007B6174 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		824D910D1815D56E007B6174 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		82B3FF021815E06D00A97590 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		824D90D71815D4CE007B6174 /* ForFunNo01 */ = {
 			isa = PBXGroup;
 			children = (
+				82B3FF011815E05900A97590 /* Resources */,
 				824D90E01815D4CE007B6174 /* AppDelegate.h */,
 				824D90E11815D4CE007B6174 /* AppDelegate.m */,
 				824D90E31815D4CE007B6174 /* Main.storyboard */,
@@ -168,6 +171,14 @@
 				824D90FE1815D4CE007B6174 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		82B3FF011815E05900A97590 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				82B3FF021815E06D00A97590 /* ball.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +263,7 @@
 				824D90EF1815D4CE007B6174 /* Images.xcassets in Resources */,
 				824D90ED1815D4CE007B6174 /* Spaceship.png in Resources */,
 				824D90E51815D4CE007B6174 /* Main.storyboard in Resources */,
+				82B3FF031815E06D00A97590 /* ball.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +496,7 @@
 				824D91071815D4CE007B6174 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		824D91081815D4CE007B6174 /* Build configuration list for PBXNativeTarget "ForFunNo01Tests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +505,7 @@
 				824D910A1815D4CE007B6174 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

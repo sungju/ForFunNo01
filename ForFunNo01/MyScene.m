@@ -18,23 +18,42 @@
         
         SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         
-        myLabel.text = @"Hello, World!";
+        myLabel.text = @"Fun Ball Rolling";
         myLabel.fontSize = 30;
         myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
                                        CGRectGetMidY(self.frame));
         
         [self addChild:myLabel];
+        
+        self.scaleMode = SKSceneScaleModeAspectFill;
+        self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
+        [self addBall];
     }
     return self;
+}
+
+- (void)addBall
+{
+    SKSpriteNode *ball = [SKSpriteNode spriteNodeWithImageNamed:@"ball"];
+    ball.position = CGPointMake(self.frame.size.width / 4 + arc4random() % ((int)self.frame.size.width/ 2),
+                                self.frame.size.height / 2 + arc4random() % ((int)self.frame.size.height / 2));
+    ball.xScale = 0.2;
+    ball.yScale = 0.2;
+    ball.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:ball.size.width / 2];
+    
+    SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
+    [ball runAction:[SKAction repeatActionForever:action]];
+    [self addChild:ball];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
     
+    /*
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
         
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
+        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"ball"];
         
         sprite.position = location;
         
@@ -44,6 +63,7 @@
         
         [self addChild:sprite];
     }
+     */
 }
 
 -(void)update:(CFTimeInterval)currentTime {
