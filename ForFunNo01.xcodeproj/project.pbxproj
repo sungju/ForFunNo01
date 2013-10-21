@@ -24,6 +24,8 @@
 		824D90F81815D4CE007B6174 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824D90D31815D4CE007B6174 /* UIKit.framework */; };
 		824D91001815D4CE007B6174 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 824D90FE1815D4CE007B6174 /* InfoPlist.strings */; };
 		824D91021815D4CE007B6174 /* ForFunNo01Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 824D91011815D4CE007B6174 /* ForFunNo01Tests.m */; };
+		824D910C1815D54F007B6174 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 824D910B1815D54F007B6174 /* .gitignore */; };
+		824D910E1815D56F007B6174 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 824D910D1815D56E007B6174 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		824D90FD1815D4CE007B6174 /* ForFunNo01Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ForFunNo01Tests-Info.plist"; sourceTree = "<group>"; };
 		824D90FF1815D4CE007B6174 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		824D91011815D4CE007B6174 /* ForFunNo01Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForFunNo01Tests.m; sourceTree = "<group>"; };
+		824D910B1815D54F007B6174 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		824D910D1815D56E007B6174 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 		824D90C31815D4CE007B6174 = {
 			isa = PBXGroup;
 			children = (
+				824D910D1815D56E007B6174 /* LICENSE */,
+				824D910B1815D54F007B6174 /* .gitignore */,
 				824D90D71815D4CE007B6174 /* ForFunNo01 */,
 				824D90FB1815D4CE007B6174 /* ForFunNo01Tests */,
 				824D90CE1815D4CE007B6174 /* Frameworks */,
@@ -240,6 +246,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				824D910E1815D56F007B6174 /* LICENSE in Resources */,
+				824D910C1815D54F007B6174 /* .gitignore in Resources */,
 				824D90DC1815D4CE007B6174 /* InfoPlist.strings in Resources */,
 				824D90EF1815D4CE007B6174 /* Images.xcassets in Resources */,
 				824D90ED1815D4CE007B6174 /* Spaceship.png in Resources */,
