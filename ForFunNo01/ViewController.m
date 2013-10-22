@@ -9,6 +9,10 @@
 #import "ViewController.h"
 #import "MyScene.h"
 
+@interface ViewController()
+@property (nonatomic, retain) SKView *skView;
+@end
+
 @implementation ViewController
 
 - (void)viewDidLoad
@@ -16,16 +20,16 @@
     [super viewDidLoad];
 
     // Configure the view.
-    SKView * skView = (SKView *)self.view;
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
+    self.skView = (SKView *)self.view;
+    self.skView.showsFPS = YES;
+    self.skView.showsNodeCount = YES;
     
     // Create and configure the scene.
-    SKScene * scene = [MyScene sceneWithSize:skView.bounds.size];
+    SKScene * scene = [MyScene sceneWithSize:self.skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     
     // Present the scene.
-    [skView presentScene:scene];
+    [self.skView presentScene:scene];
 }
 
 - (BOOL)shouldAutorotate
@@ -46,6 +50,13 @@
 {
     [super didReceiveMemoryWarning];
     // Release any cached data, images, etc that aren't in use.
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    NSLog(@"Hello: %@", self.skView.scene);
+    [(MyScene *)self.skView.scene resetBoundary];
+
 }
 
 @end

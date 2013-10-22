@@ -10,6 +10,12 @@
 
 @implementation MyScene
 
+-(void)resetBoundary
+{
+    self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
+    self.physicsBody.dynamic = YES;
+}
+
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
@@ -24,9 +30,9 @@
                                        CGRectGetMidY(self.frame));
         
         [self addChild:myLabel];
+        [self resetBoundary];
         
         self.scaleMode = SKSceneScaleModeAspectFill;
-        self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
         [self addBall];
     }
     return self;
@@ -40,6 +46,9 @@
     ball.xScale = 0.2;
     ball.yScale = 0.2;
     ball.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:ball.size.width / 2];
+    ball.physicsBody.dynamic = YES;
+    ball.physicsBody.usesPreciseCollisionDetection = YES;
+    [ball.physicsBody applyImpulse:CGVectorMake(35.0, 0)];
     
     SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
     [ball runAction:[SKAction repeatActionForever:action]];
@@ -64,6 +73,7 @@
         [self addChild:sprite];
     }
      */
+    [self addBall];
 }
 
 -(void)update:(CFTimeInterval)currentTime {
