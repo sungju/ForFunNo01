@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FE2F9611817A31D00AE7BB8 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1FE2F95E1817A31D00AE7BB8 /* background-music-aac.caf */; };
+		1FE2F9621817A31D00AE7BB8 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1FE2F95F1817A31D00AE7BB8 /* pew-pew-lei.caf */; };
+		1FE2F9631817A31D00AE7BB8 /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 1FE2F9601817A31D00AE7BB8 /* sprites.atlas */; };
 		824D90D01815D4CE007B6174 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824D90CF1815D4CE007B6174 /* Foundation.framework */; };
 		824D90D21815D4CE007B6174 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824D90D11815D4CE007B6174 /* CoreGraphics.framework */; };
 		824D90D41815D4CE007B6174 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824D90D31815D4CE007B6174 /* UIKit.framework */; };
@@ -41,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1FE2F95E1817A31D00AE7BB8 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
+		1FE2F95F1817A31D00AE7BB8 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
+		1FE2F9601817A31D00AE7BB8 /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
 		824D90CC1815D4CE007B6174 /* ForFunNo01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForFunNo01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		824D90CF1815D4CE007B6174 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		824D90D11815D4CE007B6174 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -95,9 +101,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FE2F95D1817A31D00AE7BB8 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				1FE2F95E1817A31D00AE7BB8 /* background-music-aac.caf */,
+				1FE2F95F1817A31D00AE7BB8 /* pew-pew-lei.caf */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		824D90C31815D4CE007B6174 = {
 			isa = PBXGroup;
 			children = (
+				1FE2F95D1817A31D00AE7BB8 /* Sounds */,
+				1FE2F9601817A31D00AE7BB8 /* sprites.atlas */,
 				824D910D1815D56E007B6174 /* LICENSE */,
 				824D910B1815D54F007B6174 /* .gitignore */,
 				824D90D71815D4CE007B6174 /* ForFunNo01 */,
@@ -262,6 +279,9 @@
 			files = (
 				824D910E1815D56F007B6174 /* LICENSE in Resources */,
 				824D910C1815D54F007B6174 /* .gitignore in Resources */,
+				1FE2F9631817A31D00AE7BB8 /* sprites.atlas in Resources */,
+				1FE2F9611817A31D00AE7BB8 /* background-music-aac.caf in Resources */,
+				1FE2F9621817A31D00AE7BB8 /* pew-pew-lei.caf in Resources */,
 				824D90DC1815D4CE007B6174 /* InfoPlist.strings in Resources */,
 				824D90EF1815D4CE007B6174 /* Images.xcassets in Resources */,
 				824D90ED1815D4CE007B6174 /* Spaceship.png in Resources */,
