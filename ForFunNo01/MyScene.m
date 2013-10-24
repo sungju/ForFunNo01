@@ -8,11 +8,15 @@
 
 #import "MyScene.h"
 
-@interface MyScene()
+@interface MyScene() <SKPhysicsContactDelegate>
 @property (nonatomic) SKSpriteNode *player;
 @property (nonatomic) NSTimeInterval lastSpawnTimeInterval;
 @property (nonatomic) NSTimeInterval lastUpdateTimeInterval;
 @end
+
+static const uint32_t projectileCategory = 0x1 << 0;
+static const uint32_t monsterCategory    = 0x1 << 1;
+
 
 static inline CGPoint rwAdd(CGPoint a, CGPoint b) {
     return CGPointMake(a.x + b.x, a.y + b.y);
@@ -72,6 +76,9 @@ static inline CGPoint rwNormalize(CGPoint a) {
         self.player = [SKSpriteNode spriteNodeWithImageNamed:@"player"];
         self.player.position = CGPointMake(100, 100);
         [self addChild:self.player];
+        
+        self.physicsWorld.gravity = CGVectorMake(0, 0);
+        self.physicsWorld.contactDelegate = self;
     }
     return self;
 }
@@ -111,6 +118,11 @@ static inline CGPoint rwNormalize(CGPoint a) {
     int actualY = (arc4random() % rangeY) + minY;
     
     monster.position = CGPointMake(self.frame.size.width + monster.size.width / 2, actualY);
+    monster.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:monster.size];
+    monster.physicsBody.dynamic = YES;
+    monster.physicsBody.categoryBitMask = monsterCategory;
+    monster.physicsBody.contactTestBitMask = projectileCategory;
+    //monster.physicsBody.collisionBitMask = 0;
     [self addChild:monster];
     
     int minDuration = 2.0;
@@ -151,6 +163,12 @@ static inline CGPoint rwNormalize(CGPoint a) {
     
     SKSpriteNode *projectile = [SKSpriteNode spriteNodeWithImageNamed:@"projectile"];
     projectile.position = self.player.position;
+    projectile.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:projectile.size.width / 2];
+    projectile.physicsBody.dynamic = YES;
+    projectile.physicsBody.categoryBitMask = projectileCategory;
+    projectile.physicsBody.contactTestBitMask = monsterCategory;
+    //projectile.physicsBody.collisionBitMask = 0;
+    projectile.physicsBody.usesPreciseCollisionDetection = YES;
     
     CGPoint offset = rwSub(location, projectile.position);
     
@@ -178,6 +196,35 @@ static inline CGPoint rwNormalize(CGPoint a) {
     }
     
     [self updateWithTimeSinceLastUpdate:timeSinceLast];
+}
+
+- (void)projectile:(SKSpriteNode *)projectile didCollideWithMonster:(SKSpriteNode *)monster {
+    NSLog(@"Hit");
+    /*
+    [projectile removeFromParent];
+    [monster removeFromParent];
+     */
+    [projectile removeAllActions];
+    [monster removeAllActions];
+    [projectile.physicsBody applyImpulse:CGVectorMake(35.0, 0)];
+}
+
+- (void)didBeginContact:(SKPhysicsContact *)contact
+{
+    SKPhysicsBody *firstBody, *secondBody;
+    
+    if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask) {
+        firstBody = contact.bodyA;
+        secondBody = contact.bodyB;
+    } else {
+        firstBody = contact.bodyB;
+        secondBody = contact.bodyA;
+    }
+    
+    if ((firstBody.categoryBitMask & projectileCategory) != 0 &&
+        (secondBody.categoryBitMask & monsterCategory) != 0) {
+        [self projectile:(SKSpriteNode *)firstBody.node didCollideWithMonster:(SKSpriteNode *)secondBody.node];
+    }
 }
 
 @end
