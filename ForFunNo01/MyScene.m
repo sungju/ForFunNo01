@@ -7,11 +7,13 @@
 //
 
 #import "MyScene.h"
+#import "GameOverScene.h"
 
 @interface MyScene() <SKPhysicsContactDelegate>
 @property (nonatomic) SKSpriteNode *player;
 @property (nonatomic) NSTimeInterval lastSpawnTimeInterval;
 @property (nonatomic) NSTimeInterval lastUpdateTimeInterval;
+@property (nonatomic) int monstersDestroyed;
 @end
 
 static const uint32_t projectileCategory = 0x1 << 0;
@@ -132,6 +134,14 @@ static inline CGPoint rwNormalize(CGPoint a) {
     
     SKAction *actionMove = [SKAction moveTo:CGPointMake(-monster.size.width/ 2, actualY) duration:actualDuration];
     SKAction *actionMoveDone = [SKAction removeFromParent];
+    /*
+    SKAction *loseAction = [SKAction runBlock:^{
+        SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
+        SKScene *gameOverScene = [[GameOverScene alloc] initWithSize:self.size won:NO];
+        [self.view presentScene:gameOverScene transition:reveal];
+    }];
+     */
+    
     [monster runAction:[SKAction sequence:@[actionMove, actionMoveDone]]];
 }
 
@@ -158,6 +168,8 @@ static inline CGPoint rwNormalize(CGPoint a) {
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    [self runAction:[SKAction playSoundFileNamed:@"pew-pew-lei.caf" waitForCompletion:NO]];
+    
     UITouch *touch = [touches anyObject];
     CGPoint location = [touch locationInNode:self];
     
@@ -204,6 +216,12 @@ static inline CGPoint rwNormalize(CGPoint a) {
     [projectile removeFromParent];
     [monster removeFromParent];
      */
+    self.monstersDestroyed++;
+    if (self.monstersDestroyed > 30) {
+        SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
+        SKScene *gameOverScene = [[GameOverScene alloc] initWithSize:self.size won:YES];
+        [self.view presentScene:gameOverScene transition:reveal];
+    }
     [projectile removeAllActions];
     [monster removeAllActions];
     [projectile.physicsBody applyImpulse:CGVectorMake(35.0, 0)];
