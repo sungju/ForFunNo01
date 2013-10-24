@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		1FE2F9611817A31D00AE7BB8 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1FE2F95E1817A31D00AE7BB8 /* background-music-aac.caf */; };
 		1FE2F9621817A31D00AE7BB8 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1FE2F95F1817A31D00AE7BB8 /* pew-pew-lei.caf */; };
+		820BF5B31818E74E00A815FD /* monster.png in Resources */ = {isa = PBXBuildFile; fileRef = 820BF5AD1818E74E00A815FD /* monster.png */; };
+		820BF5B41818E74E00A815FD /* monster@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 820BF5AE1818E74E00A815FD /* monster@2x.png */; };
+		820BF5B51818E74E00A815FD /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 820BF5AF1818E74E00A815FD /* player.png */; };
+		820BF5B61818E74E00A815FD /* player@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 820BF5B01818E74E00A815FD /* player@2x.png */; };
+		820BF5B71818E74E00A815FD /* projectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 820BF5B11818E74E00A815FD /* projectile.png */; };
+		820BF5B81818E74E00A815FD /* projectile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 820BF5B21818E74E00A815FD /* projectile@2x.png */; };
 		824D90D01815D4CE007B6174 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824D90CF1815D4CE007B6174 /* Foundation.framework */; };
 		824D90D21815D4CE007B6174 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824D90D11815D4CE007B6174 /* CoreGraphics.framework */; };
 		824D90D41815D4CE007B6174 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824D90D31815D4CE007B6174 /* UIKit.framework */; };
@@ -29,7 +35,6 @@
 		824D910C1815D54F007B6174 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 824D910B1815D54F007B6174 /* .gitignore */; };
 		824D910E1815D56F007B6174 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 824D910D1815D56E007B6174 /* LICENSE */; };
 		82B3FF031815E06D00A97590 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 82B3FF021815E06D00A97590 /* ball.png */; };
-		82CD265D1817BED200DA2B74 /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 82CD265C1817BED200DA2B74 /* sprites.atlas */; };
 		82E38B9D1815E3610050C396 /* brick.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E38B9C1815E3610050C396 /* brick.png */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +51,12 @@
 /* Begin PBXFileReference section */
 		1FE2F95E1817A31D00AE7BB8 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
 		1FE2F95F1817A31D00AE7BB8 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
+		820BF5AD1818E74E00A815FD /* monster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monster.png; sourceTree = "<group>"; };
+		820BF5AE1818E74E00A815FD /* monster@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "monster@2x.png"; sourceTree = "<group>"; };
+		820BF5AF1818E74E00A815FD /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
+		820BF5B01818E74E00A815FD /* player@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player@2x.png"; sourceTree = "<group>"; };
+		820BF5B11818E74E00A815FD /* projectile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = projectile.png; sourceTree = "<group>"; };
+		820BF5B21818E74E00A815FD /* projectile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "projectile@2x.png"; sourceTree = "<group>"; };
 		824D90CC1815D4CE007B6174 /* ForFunNo01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForFunNo01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		824D90CF1815D4CE007B6174 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		824D90D11815D4CE007B6174 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -72,7 +83,6 @@
 		824D910B1815D54F007B6174 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		824D910D1815D56E007B6174 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		82B3FF021815E06D00A97590 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
-		82CD265C1817BED200DA2B74 /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
 		82E38B9C1815E3610050C396 /* brick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brick.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,10 +120,23 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		820BF5921818E6C900A815FD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				820BF5AD1818E74E00A815FD /* monster.png */,
+				820BF5AE1818E74E00A815FD /* monster@2x.png */,
+				820BF5AF1818E74E00A815FD /* player.png */,
+				820BF5B01818E74E00A815FD /* player@2x.png */,
+				820BF5B11818E74E00A815FD /* projectile.png */,
+				820BF5B21818E74E00A815FD /* projectile@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		824D90C31815D4CE007B6174 = {
 			isa = PBXGroup;
 			children = (
-				82CD265C1817BED200DA2B74 /* sprites.atlas */,
+				820BF5921818E6C900A815FD /* Resources */,
 				1FE2F95D1817A31D00AE7BB8 /* Sounds */,
 				824D910D1815D56E007B6174 /* LICENSE */,
 				824D910B1815D54F007B6174 /* .gitignore */,
@@ -277,16 +300,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				820BF5B51818E74E00A815FD /* player.png in Resources */,
 				824D910E1815D56F007B6174 /* LICENSE in Resources */,
+				820BF5B71818E74E00A815FD /* projectile.png in Resources */,
 				824D910C1815D54F007B6174 /* .gitignore in Resources */,
-				82CD265D1817BED200DA2B74 /* sprites.atlas in Resources */,
+				820BF5B31818E74E00A815FD /* monster.png in Resources */,
 				1FE2F9611817A31D00AE7BB8 /* background-music-aac.caf in Resources */,
 				1FE2F9621817A31D00AE7BB8 /* pew-pew-lei.caf in Resources */,
 				824D90DC1815D4CE007B6174 /* InfoPlist.strings in Resources */,
 				824D90EF1815D4CE007B6174 /* Images.xcassets in Resources */,
+				820BF5B41818E74E00A815FD /* monster@2x.png in Resources */,
 				824D90ED1815D4CE007B6174 /* Spaceship.png in Resources */,
 				824D90E51815D4CE007B6174 /* Main.storyboard in Resources */,
 				82B3FF031815E06D00A97590 /* ball.png in Resources */,
+				820BF5B81818E74E00A815FD /* projectile@2x.png in Resources */,
+				820BF5B61818E74E00A815FD /* player@2x.png in Resources */,
 				82E38B9D1815E3610050C396 /* brick.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
